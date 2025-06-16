@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personalización de color primario usando CSS variables y utilidades extendidas (Tailwind v4+) */
+@layer base {
+  :root {
+    --color-primary: 99 102 241; /* Indigo-500 de Tailwind */
+  }
+  .bg-primary-400 {
+    background-color: rgb(var(--color-primary) / <alpha-value>);
+  }
+  .text-primary-400 {
+    color: rgb(var(--color-primary) / <alpha-value>);
+  }
+  .border-primary-400 {
+    border-color: rgb(var(--color-primary) / <alpha-value>);
+  }
+}
+
+/* Puedes agregar más utilidades personalizadas aquí si lo necesitas */
+
