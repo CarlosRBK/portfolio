@@ -7,7 +7,6 @@
   <meta name="description"
     content="Portafolio de Carlos Raul Benitez Krug, desarrollador web fullstack especializado en SaaS, infraestructura cloud y automatización." />
   <title>Carlos Raul Benitez Krug — Portafolio Fullstack</title>
-  <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
   <script>
     tailwind.config = {
@@ -29,7 +28,7 @@
 
 <body class="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
   <!-- Header y navegación principal -->
-  <!-- Header mejorado con navbar responsivo -->
+  <!-- Header navbar responsivo -->
   <header
     class="w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,15 +120,16 @@
         </p>
 
         <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
-          Desarrollador Web Fullstack con experiencia en SaaS (dos productos propios en producción) y más de 2 años de experiencia profesional como Frontend Developer.
+          Desarrollador Web Fullstack con experiencia práctica en el desarrollo completo de soluciones SaaS, incluyendo
+          dos productos propios en producción. Me especializo en crear aplicaciones robustas, escalables y con excelente
+          experiencia de usuario.
         </p>
-        
 
         <ul class="list-disc list-inside space-y-2 text-base text-gray-800 dark:text-gray-300">
           <li><b>SaaS end‑to‑end:</b> Arquitecturas multi‑tenant, CI/CD y despliegues con Docker en Digital Ocean.</li>
           <li><b>Backend:</b> APIs RESTful con Node.js, Express y TypeScript, usando PostgreSQL y MongoDB.</li>
           <li><b>Frontend moderno:</b> Interfaces interactivas con React.js, Next.js, Vue.js y TailwindCSS.</li>
-          <li><b>UX/UI:</b> Diseño de experiencia de usuario, prototipado y flujos para aplicaciones.</li>
+          <li><b>UX/UI:</b> Diseño de experiencia de usuario, prototipado y flujos para aplicaciones SaaS.</li>
           <li><b>Integración IA y analítica:</b> Prototipos en Python y consumo de APIs de inteligencia artificial.</li>
           <li><b>Infraestructura cloud:</b> Automatización, dominios, SSL y monitoreo en Digital Ocean.</li>
           <li><b>Colaboración y liderazgo:</b> Gestión de tareas, decisiones técnicas y autonomía en proyectos propios.
@@ -271,10 +271,8 @@
         </div>
       </article>
 
-      <!-- Proyecto 3 -->
  
 
-<!-- Proyecto 3 -->
 <!-- Proyecto 3 -->
 <article class="rounded-lg p-6 shadow-lg border flex flex-col md:flex-row gap-8
   bg-gray-50 border-gray-200
@@ -330,7 +328,6 @@
       <li><b>Stack:</b> Python con Streamlit para el frontend, integración con modelos de IA.</li>
       <li><b>Integración:</b> consumo de API de Gemini, visualización de resultados en frontend.</li>
     </ul>
-        <!-- Advertencia compacta dentro del artículo -->
         <section class="mb-4 p-3 bg-yellow-100 border border-yellow-400 rounded text-yellow-800 dark:bg-yellow-900 dark:border-yellow-700 dark:text-yellow-300 text-sm font-semibold select-none text-center">
           ⚠️ Herramienta solo para fines educativos e informativos.
         </section>
@@ -542,19 +539,6 @@
     &copy; 2025 Carlos Raul Benitez Krug.
   </footer>
 
-  <!-- Modal para imagen ampliada -->
-  <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 hidden">
-    <div class="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center">
-      <img id="modalImage" src="" alt="Imagen ampliada" class="max-w-full max-h-full object-contain" />
-      <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors" aria-label="Cerrar">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Script principal -->
   <script src="./assets/js/main.js"></script>
 </body>
 

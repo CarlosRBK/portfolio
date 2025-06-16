@@ -1,5 +1,3 @@
-// main.js
-// Lógica principal del portafolio: dark mode, validaciones, animaciones y toggle menú móvil
 
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
@@ -121,79 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       this.reset();
     });
   }
-});
-
-// Funcionalidad del modal de imagen ampliada
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  const closeModal = document.getElementById('closeModal');
-  let currentCarouselImages = [];
-  let currentIndex = 0;
-
-  // Función para abrir el modal con la imagen seleccionada
-  function openModal(images, index) {
-    currentCarouselImages = Array.from(images);
-    currentIndex = index;
-    updateModalImage();
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevenir scroll del fondo
-  }
-
-  // Función para actualizar la imagen mostrada en el modal
-  function updateModalImage() {
-    if (currentCarouselImages.length > 0) {
-      const imgSrc = currentCarouselImages[currentIndex].getAttribute('src');
-      modalImg.setAttribute('src', imgSrc);
-      modalImg.setAttribute('alt', 'Imagen ampliada ' + (currentIndex + 1));
-    }
-  }
-
-  // Navegación entre imágenes con teclado
-  function handleKeyDown(e) {
-    if (!modal.classList.contains('hidden')) {
-      if (e.key === 'Escape') {
-        closeModal.click();
-      } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        currentIndex--;
-        updateModalImage();
-      } else if (e.key === 'ArrowRight' && currentIndex < currentCarouselImages.length - 1) {
-        currentIndex++;
-        updateModalImage();
-      }
-    }
-  }
-
-  // Cerrar modal al hacer clic fuera de la imagen
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal.click();
-    }
-  });
-
-  // Cerrar modal con el botón
-  closeModal.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    document.body.style.overflow = ''; // Restaurar scroll del fondo
-  });
-
-  // Agregar manejador de eventos de teclado
-  document.addEventListener('keydown', handleKeyDown);
-
-  // Inicializar eventos para todos los carruseles
-  document.querySelectorAll('[class^="carousel-img-"]').forEach(img => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', () => {
-      const carouselClass = Array.from(img.classList).find(cls => cls.startsWith('carousel-img-'));
-      if (carouselClass) {
-        const images = document.querySelectorAll(`.${carouselClass}`);
-        const index = Array.from(images).findIndex(el => el === img);
-        if (index !== -1) {
-          openModal(images, index);
-        }
-      }
-    });
-  });
 });
 
 // Animaciones de aparición al hacer scroll
