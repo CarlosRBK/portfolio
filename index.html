@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Portafolio de Carlos Raul Benitez Krug, desarrollador web fullstack especializado en SaaS, infraestructura cloud y automatización." />
-  <title>Carlos Raul Benitez Krug — Portafolio Fullstack</title>
+  <title>Carlos Benitez - Portafolio</title>
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
   <script>
     tailwind.config = {
@@ -17,8 +18,10 @@
             sans: ['Inter', 'ui-sans-serif', 'system-ui'],
           },
           colors: {
-            'primary-400': 'rgb(99 102 241)',
+            'primary-400': '#ff6d00',
             'gray-950': '#0a0a23',
+            'background': '#000000',
+            'dark-blue': '#03045e',
           }
         }
       }
@@ -26,523 +29,578 @@
   </script>
 </head>
 
-<body class="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
-  <!-- Header y navegación principal -->
-  <!-- Header navbar responsivo -->
-  <header
-    class="w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 md:h-20">
-        <!-- Logo -->
-        <a href="#"
-          class="text-2xl md:text-3xl font-extrabold text-primary-600 dark:text-primary-400 tracking-wide select-none">
-          Carlos Raul Benitez Krug
-        </a>
-
-        <!-- Menú de navegación -->
-        <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700 dark:text-gray-300">
-          <a href="#proyectos"
-            class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-            Proyectos
-          </a>
-          <a href="#habilidades"
-            class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-            Habilidades
-          </a>
-          <a href="#contacto" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-            Contacto
-          </a>
-
-          <!-- Botón de tema oscuro/claro -->
-          <button id="theme-toggle" type="button"
-            class="ml-6 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg p-2 transition-colors duration-200">
-            <svg id="theme-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path id="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              <path id="moon-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
-        </nav>
-
-        <!-- Botón móvil -->
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button"
-            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 p-2 rounded-md focus:outline-none transition-colors duration-200">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+<body class="bg-white dark:bg-black text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+  <div id="smooth-wrapper">
+    <div id="smooth-content" class="pt-16 md:pt-20">
+      <!-- UX/UI Mejorado: fondo degradado y transición -->
+      <div
+        class="fixed inset-0 -z-10 bg-gradient-to-tr from-primary-400/20 via-dark-blue/40 to-background dark:bg-black transition-all duration-1000">
       </div>
-    </div>
 
-    <!-- Menú móvil -->
-    <div id="mobile-menu"
-      class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-medium text-gray-700 dark:text-gray-300">
-        <a href="#proyectos"
-          class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Proyectos
-        </a>
-        <a href="#habilidades"
-          class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Habilidades
-        </a>
-        <a href="#contacto"
-          class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Contacto
-        </a>
-      </div>
-    </div>
-  </header>
+      <!-- Header y navegación principal -->
+      <!-- Header navbar responsivo -->
+      <header
+        class="w-full bg-white/60 dark:bg-black/40 backdrop-blur-xl border-b border-white/30 dark:border-black/30 fixed top-0 left-0 right-0 z-50 shadow-lg h-16 md:h-20 flex items-center transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20">
+          <div class="flex flex-row justify-between items-center h-16 md:h-20 gap-x-16">
+            <!-- Logo -->
+            <a href="#"
+              class="text-xl md:text-3xl font-extrabold text-primary-600 dark:text-primary-400 tracking-wide select-none">
+              Carlos Raul Benitez Krug
+            </a>
 
+            <!-- Menú de navegación -->
+            <nav class="hidden md:flex items-center gap-x-4 font-medium text-gray-700 dark:text-gray-300">
+              <a href="#proyectos"
+                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+                Proyectos
+              </a>
+              <a href="#habilidades"
+                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+                Habilidades
+              </a>
+              <a href="#contacto"
+                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+                Contacto
+              </a>
 
-  <!-- Espacio para el header fijo -->
-  <div class="h-16 md:h-20"></div>
+              <!-- Botón de tema oscuro/claro -->
+              <button id="theme-toggle" type="button"
+                class="ml-6 border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:bg-white/70 dark:hover:bg-black/50 border-2 border-primary-400 text-primary-600 dark:text-primary-400 font-bold py-3 px-6 rounded-lg shadow-xl backdrop-blur-xl hover:bg-primary-400/20 hover:text-primary-700 transition-all duration-300">
+                <svg id="theme-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path id="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <path id="moon-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              </button>
+            </nav>
 
-  <section class="max-w-5xl mx-auto px-4 md:px-0 py-12 mt-16 reveal opacity-0 translate-y-8 transition-all duration-700
-  bg-gray-50 border border-gray-200 rounded-lg shadow-md
-  dark:bg-gray-900 dark:border-gray-800" aria-label="Perfil profesional">
-    <div class="flex flex-col items-center gap-8">
-      <img src="./assets/images/perfil 2.png" alt="Foto de Carlos Raul Benitez Krug"
-        class="w-48 h-48 rounded-full object-cover border-4 border-primary-400 bg-gray-800 shadow-lg" />
-
-      <div class="max-w-3xl text-center md:text-left">
-        <h2 class="text-3xl font-extrabold mb-3 text-gray-900 dark:text-gray-100">
-          Carlos Raul Benitez Krug
-        </h2>
-        <p class="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-4">
-          Licenciado en Administración de Empresas | Analista de Sistemas en formación
-        </p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-          25 años · Encarnación, Paraguay
-        </p>
-
-        <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
-          Desarrollador Web Fullstack con 2 años de experiencia en proyectos personales y profesionales. Apasionado por
-          la tecnología, siempre busco aprender nuevas herramientas y técnicas para seguir mejorando mis habilidades.
-        </p>
-
-
-
-
-        <ul class="list-disc list-inside space-y-2 text-base text-gray-800 dark:text-gray-300">
-          <li><b>SaaS end‑to‑end:</b> Arquitecturas multi‑tenant, despliegues con Docker en Digital Ocean.</li>
-          <li><b>Backend:</b> APIs RESTful con Node.js, Express y TypeScript, usando PostgreSQL y MongoDB.</li>
-          <li><b>Frontend moderno:</b> Interfaces interactivas con React.js, Next.js, Vue.js y TailwindCSS.</li>
-          <li><b>UX/UI:</b> Diseño de experiencia de usuario, prototipado y flujos para aplicaciones SaaS.</li>
-          <li><b>Integración IA y analítica:</b> Prototipos en Python y consumo de APIs de inteligencia artificial.</li>
-          <li><b>Infraestructura cloud:</b> Automatización, dominios, SSL y monitoreo en Digital Ocean.</li>
-          <li><b>Colaboración y liderazgo:</b> Gestión de tareas, decisiones técnicas y autonomía en proyectos propios.
-          </li>
-        </ul>
-
-        <div class="mt-8">
-          <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-100">Stack principal:</h3>
-          <p class="text-base text-gray-700 dark:text-gray-300 tracking-wide">
-            Node.js, Express, TypeScript, PostgreSQL, MongoDB, React.js, Next.js, Vue.js, TailwindCSS, Docker, Digital
-            Ocean, Python, APIs de IA.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <hr class="border-t border-black/80 dark:border-white/70 my-8 max-w-5xl mx-auto mt-20" />
-
-
-  <!-- Proyectos destacados -->
-  <section id="proyectos"
-    class="max-w-5xl mx-auto px-4 md:px-0 py-12 reveal opacity-0 translate-y-8 transition-all duration-700"
-    aria-label="Proyectos destacados">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Proyectos Destacados</h2>
-    </div>
-    <div class="space-y-12">
-      <!-- Proyecto 1 -->
-      <article class="rounded-lg p-6 shadow-lg border flex flex-col md:flex-row gap-8
-      bg-gray-50 border-gray-200
-      dark:bg-gray-900 dark:border-gray-800">
-        <!-- Carrusel AgendApp -->
-        <div class="w-full md:w-2/5 flex-shrink-0 flex flex-col items-center justify-center">
-          <div class="relative w-full aspect-[1893/914] rounded-lg overflow-hidden
-          bg-gray-100
-          dark:bg-gray-800">
-            <img src="./assets/images/4.png" alt="Imagen AgendApp 1"
-              class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
-            <img src="./assets/images/5.png" alt="Imagen AgendApp 2"
-              class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <img src="./assets/images/6.png" alt="Imagen AgendApp 3"
-              class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-
-            <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
-            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-            dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-prev-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
-            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-            dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-next-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="flex-1 flex flex-col justify-between">
-          <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
-            <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4 0V5a2 2 0 00-2-2H7a2 2 0 00-2 2v12m16 0a2 2 0 01-2 2H5a2 2 0 01-2-2" />
-            </svg>
-            AgendApp
-          </h3>
-          <p class="mb-2 text-gray-700 dark:text-gray-300">SaaS para empresas y profesionales independientes. Permite
-            páginas personalizadas, calendarios
-            online, recordatorios automáticos vía WhatsApp y panel de análisis.</p>
-          <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
-            <li><b>Stack:</b> Node.js, Express, MongoDB; frontend en React con TailwindCSS.</li>
-            <li><b>Despliegue:</b> Digital Ocean App Platform (Docker), dominios, Spaces, OAuth Google.</li>
-            <li><b>Rol:</b> Líder de equipo (90 % del desarrollo).</li>
-          </ul>
-          <a href="https://agendapp.net" target="_blank" rel="noopener"
-            class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 hover:underline">
-            Ver proyecto
-          </a>
-        </div>
-      </article>
-
-      <!-- Proyecto 2 -->
-      <article class="rounded-lg p-6 shadow-lg border flex flex-col md:flex-row gap-8
-      bg-gray-50 border-gray-200
-      dark:bg-gray-900 dark:border-gray-800">
-        <!-- Carrusel CloudBiz -->
-        <div class="w-full md:w-2/5 flex-shrink-0 flex flex-col items-center justify-center">
-          <div class="relative w-full aspect-[1893/914] rounded-lg overflow-hidden
-          bg-gray-100
-          dark:bg-gray-800">
-            <img src="./assets/images/1.png" alt="Imagen CloudBiz 1"
-              class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
-            <img src="./assets/images/2.png" alt="Imagen CloudBiz 2"
-              class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <img src="./assets/images/3.png" alt="Imagen CloudBiz 3"
-              class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
-            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-            dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-prev-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
-            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-            dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-next-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="flex-1 flex flex-col justify-between">
-          <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
-            <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3 7v4a1 1 0 001 1h3v5a1 1 0 001 1h4a1 1 0 001-1v-5h3a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
-            </svg>
-            CloudBiz
-          </h3>
-          <p class="mb-2 text-gray-700 dark:text-gray-300">SaaS para empresas de encomiendas. Gestión de sucursales,
-            empleados, reportes de producción y
-            clientes.</p>
-          <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
-            <li><b>Stack:</b> TypeScript, Prisma, PostgreSQL; frontend en React con TailwindCSS.</li>
-            <li><b>Despliegue:</b> Digital Ocean App Platform, dominios y object storage.</li>
-            <li><b>Rol:</b> Líder de equipo (70 % del desarrollo).</li>
-          </ul>
-        </div>
-      </article>
-
-
-
-      <!-- Proyecto 3 -->
-      <article class="rounded-lg p-6 shadow-lg border flex flex-col md:flex-row gap-8
-  bg-gray-50 border-gray-200
-  dark:bg-gray-900 dark:border-gray-800 mt-6">
-
-        <!-- Carrusel Dental-IA -->
-        <div class="w-full md:w-2/5 flex-shrink-0 flex flex-col items-center justify-center">
-          <div class="relative w-full aspect-[1893/914] rounded-lg overflow-hidden
-    bg-gray-100
-    dark:bg-gray-800">
-            <img src="./assets/images/11.png" alt="Imagen Dental-IA 1"
-              class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
-            <img src="./assets/images/12.png" alt="Imagen Dental-IA 2"
-              class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <img src="./assets/images/13.png" alt="Imagen Dental-IA 3"
-              class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <img src="./assets/images/14.png" alt="Imagen Dental-IA 4"
-              class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
-            <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
-      bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-      dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-prev-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
-      bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2
-      dark:bg-gray-900/60 dark:hover:bg-gray-900/90 dark:text-white carousel-next-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+            <!-- Botón móvil -->
+            <div class="md:hidden flex items-center gap-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Menú</span>
+              <button id="mobile-menu-button"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 p-2 rounded-md focus:outline-none transition-colors duration-200"
+                aria-label="Menú de navegación">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path id="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="flex-1 flex flex-col justify-between">
-
-
-          <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
-            <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-5-5.917V4a2 2 0 10-4 0v1.083A6.002 6.002 0 004 11v3.159c0 .538-.214 1.055-.595 1.436L2 17h5m8 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-            Dental‑IA
-          </h3>
-          <p class="mb-2 text-gray-700 dark:text-gray-300">Asistente de diagnóstico dental con IA (Gemini 2.0 Flash).
-            Análisis de radiografías para
-            apoyar decisiones clínicas.</p>
-          <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
-            <li><b>Stack:</b> Python con Streamlit para el frontend, integración con modelos de IA.</li>
-            <li><b>Integración:</b> consumo de API de Gemini, visualización de resultados en frontend.</li>
-          </ul>
-          <section
-            class="mb-4 p-3 bg-yellow-100 border border-yellow-400 rounded text-yellow-800 dark:bg-yellow-900 dark:border-yellow-700 dark:text-yellow-300 text-sm font-semibold select-none text-center">
-            ⚠️ Herramienta solo para fines educativos e informativos.
-          </section>
-        </div>
-      </article>
-
-
-    </div>
-  </section>
-
-  <hr class="border-t border-black/80 dark:border-white/70 my-8 max-w-5xl mx-auto mt-20" />
-
-  <section id="habilidades"
-    class="max-w-6xl mx-auto px-4 py-16 reveal opacity-0 translate-y-8 transition-all duration-700"
-    aria-label="Habilidades técnicas">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Habilidades Técnicas</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">Tecnologías y herramientas con las que trabajo habitualmente</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Frontend -->
-      <div
-        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
-        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Frontend</h3>
-        <ul class="space-y-3">
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">React.js / Next.js / Vue.js</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">JavaScript / TypeScript / Python</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Tailwind CSS / Bootstrap / CSS / MaterialUI</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Responsive Design / PWA</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Backend -->
-      <div
-        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
-        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Backend</h3>
-        <ul class="space-y-3">
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Node.js & Express / Fastify</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Python & Flask</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">PostgreSQL / MongoDB</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">APIs RESTful</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- DevOps & Cloud -->
-      <div
-        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
-        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">DevOps & Cloud</h3>
-        <ul class="space-y-3">
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Docker</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Digital Ocean (App Platform, Droplets, Spaces,
-              Databases)</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">GitHub Actions</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Nginx</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Herramientas y Entornos -->
-      <div
-        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
-        <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Herramientas & Entornos</h3>
-        <ul class="space-y-3">
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Git & GitHub</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">VS Code / WebStorm</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Figma</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Postman & Swagger</span>
-          </li>
-          <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
-            <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
-            <span class="text-gray-600 dark:text-gray-300">Windows 11 / macOS / Linux (Cloud servers)</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <hr class="border-t border-black/80 dark:border-white/70 max-w-5xl mx-auto my-20" />
-
-
-  <!-- Contacto -->
-  <section id="contacto"
-    class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700 mb-12"
-    aria-label="Contacto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
-    </div>
-
-    <p class="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto leading-relaxed">
-      ¿Tenés alguna pregunta?<br />
-      No dudes en contactarme a través de estos medios.
-    </p>
-
-    <div class="flex flex-col md:flex-row justify-center gap-12 text-gray-700 dark:text-gray-300 text-lg">
-      <a href="mailto:carlos.bkrug@gmail.com"
-        class="flex items-center gap-4 bg-gray-100 dark:bg-gray-800 hover:bg-primary-400 hover:text-white rounded-md px-5 py-3 transition-colors cursor-pointer select-text shadow-sm"
-        aria-label="Enviar email a carlos.bkrug@gmail.com" title="Enviar email">
-        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+        <!-- Menú móvil -->
+        <div id="mobile-menu"
+          class="md:hidden hidden fixed inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-sm z-40 pt-24"
           aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M16 12l-4 4-4-4m8-4H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2z" />
-        </svg>
-        <span>Email</span>
-      </a>
+          <div class="bg-white dark:bg-gray-900 rounded-t-2xl shadow-2xl w-full max-w-md mx-auto p-6 space-y-4 animate-slide-up">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Menú de Navegación</h3>
+              <button id="close-mobile-menu" 
+                class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white p-2 -mr-2"
+                aria-label="Cerrar menú">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <nav class="space-y-2">
+              <a href="#proyectos"
+                class="block w-full px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200">
+                <span class="flex items-center">
+                  <svg class="w-5 h-5 mr-3 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                  Proyectos
+                </span>
+              </a>
+              
+              <a href="#habilidades"
+                class="block w-full px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200">
+                <span class="flex items-center">
+                  <svg class="w-5 h-5 mr-3 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                  Habilidades
+                </span>
+              </a>
+              
+              <a href="#contacto"
+                class="block w-full px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200">
+                <span class="flex items-center">
+                  <svg class="w-5 h-5 mr-3 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Contacto
+                </span>
+              </a>
+              
+              <button id="theme-toggle-mobile" type="button"
+                class="w-full flex items-center px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200">
+                <svg id="theme-icon-mobile" class="w-5 h-5 mr-3 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path id="theme-icon-mobile-sun" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <path id="theme-icon-mobile-moon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <span id="theme-text">Cambiar a modo oscuro</span>
+              </button>
+            </nav>
+            
+            <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-800">
+              <p class="text-sm text-center text-gray-500 dark:text-gray-400">© 2023 Carlos Benitez</p>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </header>
 
-      <a href="https://linkedin.com/in/carlos-raul-benitez-krug" target="_blank" rel="noopener noreferrer"
-        class="flex items-center gap-4 bg-gray-100 dark:bg-gray-800 hover:bg-primary-400 hover:text-white rounded-md px-5 py-3 transition-colors cursor-pointer shadow-sm"
-        aria-label="Abrir perfil de LinkedIn" title="LinkedIn">
-        <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.036-1.849-3.036-1.85 0-2.132 1.445-2.132 2.94v5.665H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.368-1.849 3.602 0 4.268 2.37 4.268 5.455v6.285zM5.337 7.433a2.066 2.066 0 110-4.132 2.066 2.066 0 010 4.132zm1.778 13.019H3.559V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.225.792 24 1.771 24h20.451c.98 0 1.778-.775 1.778-1.727V1.727C24 .774 23.204 0 22.225 0z" />
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-
-      <a href="https://github.com/CarlosRBK" target="_blank" rel="noopener noreferrer"
-        class="flex items-center gap-4 bg-gray-100 dark:bg-gray-800 hover:bg-primary-400 hover:text-white rounded-md px-5 py-3 transition-colors cursor-pointer shadow-sm"
-        aria-label="Abrir perfil de GitHub" title="GitHub">
-        <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.04 1.53 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.114 2.51.335 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0012 2z" />
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </section>
 
 
+      <section class="mx-auto px-4 md:px-0 py-16 reveal transition-all duration-700
+  bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/30 dark:border-black/30 rounded-2xl shadow-xl
+  transition-all duration-500" aria-label="Perfil profesional">
+        <div class="flex flex-col items-center gap-8">
+          <img src="./assets/images/perfil 2.png" alt="Foto de Carlos Raul Benitez Krug"
+            class="w-48 h-48 rounded-full object-cover border-4 border-primary-400 bg-gray-800 shadow-lg" />
+
+          <div class="max-w-3xl text-center md:text-left">
+            <h2 class="text-3xl font-extrabold mb-3 text-gray-900 dark:text-gray-100">
+              Carlos Raul Benitez Krug
+            </h2>
+            <p class="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-4">
+              Licenciado en Administración de Empresas | Analista de Sistemas en formación
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              25 años · Encarnación, Paraguay
+            </p>
+
+            <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
+              Desarrollador Web Fullstack con 2 años de experiencia en proyectos personales y profesionales. Apasionado
+              por
+              la tecnología, siempre busco aprender nuevas herramientas y técnicas para seguir mejorando mis
+              habilidades.
+            </p>
 
 
-  <!-- Footer -->
-  <footer class="w-full py-6 text-center text-sm text-gray-500 border-t border-gray-800">
-    &copy; 2025 Carlos Raul Benitez Krug.
-  </footer>
 
+
+            <ul class="list-disc list-inside space-y-2 text-base text-gray-800 dark:text-gray-300">
+              <li><b>SaaS end‑to‑end:</b> Arquitecturas multi‑tenant, despliegues con Docker en Digital Ocean.</li>
+              <li><b>Backend:</b> APIs RESTful con Node.js, Express y TypeScript, usando PostgreSQL y MongoDB.</li>
+              <li><b>Frontend moderno:</b> Interfaces interactivas con React.js, Next.js, Vue.js y TailwindCSS.</li>
+              <li><b>UX/UI:</b> Diseño de experiencia de usuario, prototipado y flujos para aplicaciones SaaS.</li>
+              <li><b>Integración IA y analítica:</b> Prototipos en Python y consumo de APIs de inteligencia artificial.
+              </li>
+              <li><b>Infraestructura cloud:</b> Automatización, dominios, SSL y monitoreo en Digital Ocean.</li>
+              <li><b>Colaboración y liderazgo:</b> Gestión de tareas, decisiones técnicas y autonomía en proyectos
+                propios.
+              </li>
+            </ul>
+
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-100">Stack principal:</h3>
+              <p class="text-base text-gray-700 dark:text-gray-300 tracking-wide">
+                Node.js, Express, TypeScript, PostgreSQL, MongoDB, React.js, Next.js, Vue.js, TailwindCSS, Docker,
+                Digital
+                Ocean, Python, APIs de IA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <hr class="border-t border-black/80 dark:border-white/70 my-8 max-w-5xl mx-auto mt-20" />
+
+
+      <!-- Proyectos destacados -->
+      <section id="proyectos" class="max-w-5xl mx-auto px-4 md:px-0 py-16 reveal transition-all duration-700
+    bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/30 dark:border-black/30 rounded-2xl shadow-xl
+    transition-all duration-500" aria-label="Proyectos destacados">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Proyectos Destacados</h2>
+        </div>
+        <div class="space-y-24">
+          <!-- Proyecto 1: AgendApp -->
+          <article class="rounded-2xl p-6 shadow-xl border flex flex-col gap-6 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl transition-all duration-500">
+            <!-- Carrusel -->
+            <div class="w-full">
+              <div class="relative w-full aspect-[1893/914] rounded-lg overflow-hidden
+          bg-gray-100
+          dark:bg-gray-800">
+                <img src="./assets/images/4.png" alt="Imagen AgendApp 1"
+                  class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
+                <img src="./assets/images/5.png" alt="Imagen AgendApp 2"
+                  class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                  <img src="./assets/images/6.png" alt="Imagen AgendApp 3"
+                  class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                  <img src="./assets/images/7.png" alt="Imagen AgendApp 3"
+                  class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                  <img src="./assets/images/8.png" alt="Imagen AgendApp 3"
+                  class="carousel-img-1 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+
+                <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
+            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-prev-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
+            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-next-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4 0V5a2 2 0 00-2-2H7a2 2 0 00-2 2v12m16 0a2 2 0 01-2 2H5a2 2 0 01-2-2" />
+                </svg>
+                AgendApp
+              </h3>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">SaaS para empresas y profesionales independientes. Permite páginas personalizadas, calendarios online, recordatorios automáticos vía WhatsApp y panel de análisis.</p>
+              <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
+                <li><b>Stack:</b> Node.js, Express, MongoDB; frontend en React con TailwindCSS.</li>
+                <li><b>Despliegue:</b> Digital Ocean App Platform (Docker), dominios, Spaces, OAuth Google.</li>
+                <li><b>Rol:</b> Líder de equipo (90% del desarrollo).</li>
+              </ul>
+              </div>
+              <a href="https://agendapp.net" target="_blank" rel="noopener" class="inline-flex items-center mt-6 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-semibold group">
+                Ver proyecto
+                <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: CloudBiz -->
+          <article class="rounded-2xl p-6 shadow-xl border flex flex-col gap-6 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl transition-all duration-500">
+            <!-- Carrusel -->
+            <div class="w-full">
+              <div class="relative w-full aspect-[1893/914] rounded-lg overflow-hidden
+          bg-gray-100
+          dark:bg-gray-800">
+                <img src="./assets/images/1.png" alt="Imagen CloudBiz 1"
+                  class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
+                <img src="./assets/images/2.png" alt="Imagen CloudBiz 2"
+                  class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                <img src="./assets/images/3.png" alt="Imagen CloudBiz 3"
+                  class="carousel-img-2 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
+            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-prev-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
+            bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-next-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 7v4a1 1 0 001 1h3v5a1 1 0 001 1h4a1 1 0 001-1v-5h3a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
+                </svg>
+                CloudBiz
+              </h3>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">SaaS para empresas de encomiendas. Gestión de sucursales, empleados, reportes de producción y clientes.</p>
+              <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
+                <li><b>Stack:</b> TypeScript, Prisma, PostgreSQL; frontend en React con TailwindCSS.</li>
+                <li><b>Despliegue:</b> Digital Ocean App Platform, dominios y object storage.</li>
+                <li><b>Rol:</b> Líder de equipo (70% del desarrollo).</li>
+              </ul>
+            </div>
+          </article>
+
+
+
+          <!-- Proyecto 3: Dental-IA -->
+          <article class="rounded-2xl p-6 shadow-xl border flex flex-col gap-6 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl transition-all duration-500">
+
+            <!-- Carrusel -->
+            <div class="w-full">
+              <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+                <img src="./assets/images/11.png" alt="Imagen Dental-IA 1"
+                  class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-100" />
+                <img src="./assets/images/12.png" alt="Imagen Dental-IA 2"
+                  class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                <img src="./assets/images/13.png" alt="Imagen Dental-IA 3"
+                  class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                <img src="./assets/images/14.png" alt="Imagen Dental-IA 4"
+                  class="carousel-img-3 object-cover w-full h-full transition-opacity duration-500 opacity-0 absolute top-0 left-0" />
+                <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2
+      bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-prev-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2
+      bg-gray-300/60 hover:bg-gray-300/90 text-gray-900 rounded-full p-2 dark:bg-black/60 dark:hover:bg-black dark:text-white carousel-next-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex-1 flex flex-col justify-between">
+
+
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                <svg class="w-5 h-5 text-primary-400 inline-block" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-5-5.917V4a2 2 0 10-4 0v1.083A6.002 6.002 0 004 11v3.159c0 .538-.214 1.055-.595 1.436L2 17h5m8 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                Dental‑IA
+              </h3>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">Asistente de diagnóstico dental con IA (Gemini 2.0 Flash). Análisis de radiografías para apoyar decisiones clínicas.</p>
+              <ul class="text-sm mb-2 text-gray-600 dark:text-gray-400">
+                <li><b>Stack:</b> Python con Streamlit para el frontend, integración con modelos de IA.</li>
+                <li><b>Integración:</b> consumo de API de Gemini, visualización de resultados en frontend.</li>
+              </ul>
+              </div>
+              <section class="mt-6 p-3 bg-yellow-100 border border-yellow-400 rounded-lg text-yellow-800 dark:bg-yellow-900/50 dark:border-yellow-700/50 dark:text-yellow-300 text-sm font-semibold select-none text-center">
+                ⚠️ Herramienta solo para fines educativos e informativos.
+              </section>
+            </div>
+          </article>
+
+
+        </div>
+      </section>
+
+      <hr class="border-t border-black/80 dark:border-white/70 my-8 max-w-5xl mx-auto mt-20" />
+
+      <section id="habilidades" class="max-w-6xl mx-auto px-4 py-16 transition-all duration-700
+    bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/30 dark:border-black/30 rounded-2xl shadow-xl
+    transition-all duration-500" aria-label="Habilidades técnicas">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Habilidades Técnicas</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Tecnologías y herramientas con las que trabajo habitualmente</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Frontend -->
+          <div
+            class="bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 p-6 rounded-xl border">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Frontend</h3>
+            <ul class="space-y-3">
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">React.js / Next.js / Vue.js</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">JavaScript / TypeScript / Python</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Tailwind CSS / Bootstrap / CSS / MaterialUI</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Responsive Design / PWA</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div
+            class="bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 p-6 rounded-xl border">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Backend</h3>
+            <ul class="space-y-3">
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Node.js & Express / Fastify</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Python & Flask</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">PostgreSQL / MongoDB</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">APIs RESTful</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- DevOps & Cloud -->
+          <div
+            class="bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 p-6 rounded-xl border">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">DevOps & Cloud</h3>
+            <ul class="space-y-3">
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Docker</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Digital Ocean (App Platform, Droplets, Spaces,
+                  Databases)</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">GitHub Actions</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Nginx</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Herramientas y Entornos -->
+          <div
+            class="bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 p-6 rounded-xl border">
+            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Herramientas & Entornos</h3>
+            <ul class="space-y-3">
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Git & GitHub</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">VS Code / WebStorm</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Figma</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Postman & Swagger</span>
+              </li>
+              <li class="grid grid-cols-[auto,1fr] gap-2 items-start">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mt-1"></span>
+                <span class="text-gray-600 dark:text-gray-300">Windows 11 / macOS / Linux (Cloud servers)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-t border-black/80 dark:border-white/70 max-w-5xl mx-auto my-20" />
+
+
+      <!-- Contacto -->
+      <section id="contacto"
+        class="max-w-4xl mx-auto bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/30 dark:border-black/30 p-10 rounded-2xl shadow-xl transition-all duration-500 mb-12"
+        aria-label="Contacto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
+        </div>
+
+        <p class="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto leading-relaxed">
+          ¿Tenés alguna pregunta?<br />
+          No dudes en contactarme a través de estos medios.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-12 text-gray-700 dark:text-gray-300 text-lg">
+          <a href="mailto:carlos.bkrug@gmail.com"
+            class="flex items-center gap-4 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 text-primary-600 dark:text-primary-400 rounded-md px-5 py-3 cursor-pointer select-text"
+            aria-label="Enviar email a carlos.bkrug@gmail.com" title="Enviar email">
+            <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 12l-4 4-4-4m8-4H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2z" />
+            </svg>
+            <span>Email</span>
+          </a>
+
+          <a href="https://linkedin.com/in/carlos-raul-benitez-krug" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-4 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 text-primary-600 dark:text-primary-400 rounded-md px-5 py-3 cursor-pointer"
+            aria-label="Abrir perfil de LinkedIn" title="LinkedIn">
+            <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.036-1.849-3.036-1.85 0-2.132 1.445-2.132 2.94v5.665H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.368-1.849 3.602 0 4.268 2.37 4.268 5.455v6.285zM5.337 7.433a2.066 2.066 0 110-4.132 2.066 2.066 0 010 4.132zm1.778 13.019H3.559V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.225.792 24 1.771 24h20.451c.98 0 1.778-.775 1.778-1.727V1.727C24 .774 23.204 0 22.225 0z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/CarlosRBK" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-4 bg-white/70 border-primary-400/40 dark:bg-black/50 dark:border-primary-400/30 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 text-primary-600 dark:text-primary-400 rounded-md px-5 py-3 cursor-pointer"
+            aria-label="Abrir perfil de GitHub" title="GitHub">
+            <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.04 1.53 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.114 2.51.335 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0012 2z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/animations.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script>
+    // Cerrar menú móvil al hacer clic en un enlace
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+        document.getElementById('mobile-menu-button').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Cerrar menú con el botón
+    document.getElementById('close-mobile-menu')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      document.getElementById('mobile-menu-button').setAttribute('aria-expanded', 'false');
+    });
+  </script>
 </body>
 
 </html>

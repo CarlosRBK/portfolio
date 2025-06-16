@@ -46,54 +46,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Menú móvil: toggle visibilidad y cambio de icono
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.setAttribute('aria-expanded', 'false'); // accesibilidad
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = 'auto';
+    };
 
-    mobileMenuButton.addEventListener('click', () => {
+    const openMenu = () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+
+    // Toggle del menú móvil
+    mobileMenuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
-      mobileMenu.classList.toggle('hidden');
-
-      const menuIcon = mobileMenuButton.querySelector('svg');
-      if (menuIcon) {
-        if (isExpanded) {
-          // Mostrar icono hamburguesa
-          menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
-        } else {
-          // Mostrar icono cerrar (X)
-          menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
-        }
+      
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
 
-    // Cerrar menú móvil al hacer clic en cualquier enlace
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        const menuIcon = mobileMenuButton.querySelector('svg');
-        if (menuIcon) {
-          menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
-        }
+    // Cerrar menú con el botón de cerrar
+    const closeButton = document.getElementById('close-mobile-menu');
+    if (closeButton) {
+      closeButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeMenu();
       });
+    }
+
+    // Cerrar al hacer clic en un enlace del menú
+    const navLinks = mobileMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Evitar que el clic en el menú lo cierre
+    mobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
   }
 
-  // Cerrar menú móvil al hacer click fuera del menú y botón (solo si está abierto)
-  document.addEventListener('click', (e) => {
-    if (
-      mobileMenu && !mobileMenu.contains(e.target) &&
-      mobileMenuButton && !mobileMenuButton.contains(e.target) &&
-      !mobileMenu.classList.contains('hidden')
-    ) {
-      mobileMenu.classList.add('hidden');
-      mobileMenuButton.setAttribute('aria-expanded', 'false');
-      const menuIcon = mobileMenuButton.querySelector('svg');
-      if (menuIcon) {
-        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+  // Toggle de tema para móvil
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', () => {
+      const isDark = html.classList.toggle('dark');
+      updateTheme(isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      
+      // Actualizar texto del botón
+      const themeText = document.getElementById('theme-text');
+      if (themeText) {
+        themeText.textContent = isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
       }
-    }
-  });
+    });
+  }
 
   // Validación básica del formulario de contacto
   if (contactForm) {
